@@ -18,6 +18,7 @@ extensions = [
     "notfound.extension",
     "sphinxext.opengraph",
     "sphinx_copybutton",
+    "sphinx.ext.intersphinx",
 ]
 
 # Warning when the Sphinx Tabs extension is used with unknown
@@ -90,6 +91,10 @@ author = "Juan Linietsky, Ariel Manzur and the Godot community"
 version = os.getenv("READTHEDOCS_VERSION", "4.2")
 # The full version, including alpha/beta/rc tags
 release = version
+
+intersphinx_mapping = {
+    "godot": (f"https://docs.godotengine.org/en/{version}", None),
+}
 
 # Parse Sphinx tags passed from RTD via environment
 env_tags = os.getenv("SPHINX_TAGS")
